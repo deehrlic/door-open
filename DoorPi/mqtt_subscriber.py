@@ -4,8 +4,8 @@
 import paho.mqtt.client as mqtt
 import os
 
-#IP OF THE DEVICE GOES HERE, CHANGE IF USING
-MQTT_SERVER = "100.64.59.42"
+#IP OF THE DEVICE RUNNNING THIS CODE GOES HERE, CHANGE IF USING
+MQTT_SERVER = "YOUR.IP.HERE"
 MQTT_PATH = "test_channel"
  
 # The callback for when the client receives a CONNACK response from the server.
