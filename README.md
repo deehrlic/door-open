@@ -21,31 +21,60 @@ Physical Components:
 Digital Components:
 -Node.js and npm installed on your computer and the Raspberry Pi connected to the servo motor: https://nodejs.org/
 -ngrok installed on all the Raspberry Pis you are using for this project: https://ngrok.com/download
-
-
+-PythonShell module for Node.js
 ```
-Give examples
+npm install python-shell
 ```
+-Express.js for Node.js
+```
+npm install express
+```
+-gpiozero for Python (for use on Raspberry Pi GPIO pins): https://gpiozero.readthedocs.io/en/stable/installing.html
+-paho-mqtt for Pyhton (only if implementing Alexa functionality)
+```
+pip install paho-mqtt
+```
+or 
+```
+pip3 install paho-mqtt
+```
+-Flask-Ask for Python (only if implementing Alexa functionality)
+```
+pip install Flask-Ask
+```
+or
+```
+pip3 install paho-mqtt
+```
+-An Amazon developer account
+
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+-To get this project up and running you need to create a directory on each Raspberry Pi you are using to keep your files
+-Then all the files in the doorPi folder go on the Raspberry Pi you are connecting to the servo motor, and all the files except for Schema.JSON (it's for use in Amazon Alexa SDK) go on the other Raspberry Pi if you are implementing the Alexa functionality
+-Node.js should add the node_modules and packagelock.json files into the directory automatically when you run the code for the first time
 
-Say what the step will be
-
+*For running the web server that triggers the servo motor
 ```
-Give the example
+node lockshell.js
 ```
-
-And repeat
-
+Starts the Node.js server locally. Then in a different terminal window,
 ```
-until finished
+ngrok http 3000
 ```
+Should give you a link to access the web server from anywhere. Accessing the link should trigger the python script that runs the servo motor.
 
-End with an example of getting some data out of the system or using it for a little demo
+Going to yourngroklink.ngrok.io/admin once your server is running will let you turn the ability to trigger the motor upon accessing the webpage on and off, creating a 'lock' of sorts. When someone attempts to unlock the door when it is in 'locked' mode, the LED should turn on for a few seconds and the user should be redirected.
 
-## Built With
+## ADD ALEXA PART
+*
+*
+*
+*
+*
+
+## Built In
 
 *Node.js
 *Python3
