@@ -1,3 +1,6 @@
+#Base code from: https://www.hackster.io/nishit-patel/controlling-raspberry-pi-using-alexa-33715b
+#Modified by Drew Ehrlich
+
 import logging
 import os
 
@@ -19,16 +22,8 @@ def launch():
 
 @ask.intent('GpioIntent', mapping = {'status':'status'})
 def Gpio_Intent(status,room):
-    #GPIO.setwarnings(False)
-    #GPIO.setmode(GPIO.BCM)    
-    #GPIO.setup(17,GPIO.OUT)
-    #if status in STATUSON:
     os.system("python3 mqtt_publisher.py") 	
     return statement('go off I guess'.format(status))
-    #elif status in STATUSOFF:
-    #return statement('turning {} lights'.format(status))
-    #else:
-    #return statement('Sorry not possible.')
  
 @ask.intent('AMAZON.HelpIntent')
 def help():
