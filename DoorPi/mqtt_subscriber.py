@@ -1,6 +1,10 @@
+#Base code from https://tutorials-raspberrypi.com/raspberry-pi-mqtt-broker-client-wireless-communication/
+#Modified by Drew Ehrlich
+
 import paho.mqtt.client as mqtt
 import os
- 
+
+#IP OF THE DEVICE GOES HERE, CHANGE IF USING
 MQTT_SERVER = "100.64.59.42"
 MQTT_PATH = "test_channel"
  
