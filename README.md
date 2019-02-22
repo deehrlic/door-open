@@ -85,7 +85,7 @@ Going to yourngroklink.ngrok.io/admin once your server is running will let you t
 This is a personal project which isn't really contribution-friendly since it requires a lot of hardware (2 Raspberry Pis, an Amazon Echo, and a servo motor) to run.
 
 * **Drew Ehrlich** - *Codebase Developer* - [deehrlic](https://github.com/deehrlic)
-* **Corey DuVal** - *Circuitry/Development Assistance* - No Github
+* **Corey DuVal** - *Circuit Master/Development Assistance* - No Github
 
 ## License
 
