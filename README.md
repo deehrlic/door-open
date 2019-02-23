@@ -1,13 +1,13 @@
 # door-open
 
-This repository contains a the code for a personal project that allowed me and my roommate to set up a Raspberry Pi running a Node.js web server tunneled through ngrok to trigger a servo motor whenever the webpage associated with the server was accessed which opened our door to our room. The code for this portion of the project is contained in the doorPi folder of this repository.
+This repository contains a the code for a personal project that allowed me and my roommate to set up a Raspberry Pi running a Node.js web server tunneled through ngrok to trigger a servo motor whenever the webpage associated with the server was accessed which opened our door to our room. The code for this portion of the project is contained in the doorPi folder of this repository. The way the user interacts with this is by accessing a URL created by ngrok, a http tunneling service.
 
 We have since added the ability to ask an Amazon Echo to open our door with the command, 'Alexa, ask room door'. To set this up, you also need an Amazon developer account, an Echo device, and either a second Raspberry Pi or a ngrok Pro account. 
 
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions should allow you to be able set up the system allowing you to remoltely open your door with either a webpage or an Amazon Echo.
 
 ### Prerequisites
 
