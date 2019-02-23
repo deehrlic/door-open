@@ -75,12 +75,34 @@ Going to yourngroklink.ngrok.io/admin once your server is running will let you t
 -On the second Raspberry Pi, create a directory to store your work, and move all files from the remotePi folder into that directory except Schema.JSON. Following this tutorial (https://www.hackster.io/nishit-patel/controlling-raspberry-pi-using-alexa-33715b), set up a new Alexa skill (named room instead of raspberry) and replace the JSON code in the Interaction Model with Schema.JSON.
 
 To enable the Alexa skill, do the following:
--In separate terminals, run alexa.py, mqtt_publisher.py, and start a ngrok tunnel on port 5000 (./ngrok http 5000), replacing the ip address in mqtt_publisher with the address of the Raspberry Pi that triggers the servo motor. On that pi, run mqtt_subscriber.py and replace the ip address field in that file with that device's internal IP address. After building the Alexa skill and making sure you have input the ngrok tunnel's address into the endpoint section of the Interaction Model and that the skill is enabled in the Alexa, app, you can test the skill in your browser with the built-in Alexa simulator. Once that's working, you should be able to test the whole thing by asking 'Alexa, ask room door'. If you have named your skill something different than 'room' instead say 'Alexa, ask {skill name} door.
+-In separate terminals for each,
+
+```
+python3 alexa.py
+```
+
+```
+python3 mqtt_publisher.py
+```
+
+and then start a ngrok tunnel on port 5000 
+
+```
+ngrok http 5000
+```
+
+Important Note: Change the ip address in mqtt_publisher with the address of the Raspberry Pi that triggers the servo motor. On that pi, run 
+
+```
+python3 mqtt_subscriber.py
+```
+
+and replace the ip address field in that file with that device's internal IP address. After building the Alexa skill and making sure you have input the ngrok tunnel's address into the endpoint section of the Interaction Model and that the skill is enabled in the Alexa, app, you can test the skill in your browser with the built-in Alexa simulator. Once that's working, you should be able to test the whole thing by asking 'Alexa, ask room door'. If you have named your skill something different than 'room' instead say 'Alexa, ask {skill name} door.
 
 ## Built In
 
-Node.js
-Python3
+Node.js with Express.js
+Python 3
 JSON/Amazon Alexa SDK
 
 ## Contributing
@@ -97,5 +119,9 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 * Special thanks to:
+**Justin Hinman**
+
+and
+
 https://www.hackster.io/nishit-patel/controlling-raspberry-pi-using-alexa-33715b
 https://tutorials-raspberrypi.com/raspberry-pi-mqtt-broker-client-wireless-communication/
