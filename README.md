@@ -120,6 +120,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 Special thanks to:
 **Justin Hinman**
-and
-https://www.hackster.io/nishit-patel/controlling-raspberry-pi-using-alexa-33715b
-https://tutorials-raspberrypi.com/raspberry-pi-mqtt-broker-client-wireless-communication/
+*https://www.hackster.io/nishit-patel/controlling-raspberry-pi-using-alexa-33715b
+*https://tutorials-raspberrypi.com/raspberry-pi-mqtt-broker-client-wireless-communication/
