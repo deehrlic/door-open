@@ -2,7 +2,7 @@
 
 This repository contains a the code for a personal project that allowed me and my roommate to set up a Raspberry Pi running a Node.js web server tunneled through ngrok to trigger a servo motor whenever the webpage associated with the server was accessed which opened our door to our room. The code for this portion of the project is contained in the doorPi folder of this repository.
 
-We have since added the ability to ask an Amazon Echo to open our door with the command, 'Alexa, ask room door'. To set this up, you also need an Amazon developer account. Further details are in the remotePi folder of this repository.
+We have since added the ability to ask an Amazon Echo to open our door with the command, 'Alexa, ask room door'. To set this up, you also need an Amazon developer account, an Echo device, and either a second Raspberry Pi or a ngrok Pro account. 
 
 
 ## Getting Started
@@ -15,6 +15,7 @@ To run this project, you need:
 
 Physical Components:
 -2 Raspberry Pis with WiFi capability (only one if you aren't setting up the Alexa component or if you have a ngrok Pro account)
+-2 free ngrok accounts (or 1 Pro account if you want to use one device)
 -1 Servo Motor, we used this one https://www.amazon.com/ANNIMOS-Digital-Waterproof-DS3218MG-Control/dp/B076CNKQX4?ref_=fsclp_pl_dp_1
 -1 LED and some header cables to set up the circuit (diagram coming soon)
 
@@ -67,12 +68,14 @@ Should give you a link to access the web server from anywhere. Accessing the lin
 
 Going to yourngroklink.ngrok.io/admin once your server is running will let you turn the ability to trigger the motor upon accessing the webpage on and off, creating a 'lock' of sorts. When someone attempts to unlock the door when it is in 'locked' mode, the LED should turn on for a few seconds and the user should be redirected.
 
-## ADD ALEXA PART
-*
-*
-*
-*
-*
+*To implement Alexa activation after the inital circuit/server is set up
+
+-To get the ability to say 'Alexa, ask room door' and open the door you need a second Raspberry Pi and a second ngrok account (or a Pro level ngrok account since you will need two active ngrok tunnels at once to use both the website and Alexa to open the door, and free ngrok accounts only allow one active ngrok tunnel per account), and some kind of Amazon Echo device.
+-Create an Amazon developer account and use that same account to set up your Echo device.
+-On the second Raspberry Pi, create a directory to store your work, and move all files from the remotePi folder into that directory except Schema.JSON. Following this tutorial (https://www.hackster.io/nishit-patel/controlling-raspberry-pi-using-alexa-33715b), set up a new Alexa skill (named room instead of raspberry) and replace the JSON code in the Interaction Model with Schema.JSON.
+
+To enable the Alexa skill, do the following:
+-In separate terminals, run alexa.py, mqtt_publisher.py, and start a ngrok tunnel on port 5000 (./ngrok http 5000), replacing the ip address in mqtt_publisher with the address of the Raspberry Pi that triggers the servo motor. On that pi, run mqtt_subscriber.py and replace the ip address field in that file with that device's internal IP address. After building the Alexa skill and making sure you have input the ngrok tunnel's address into the endpoint section of the Interaction Model and that the skill is enabled in the Alexa, app, you can test the skill in your browser with the built-in Alexa simulator. Once that's working, you should be able to test the whole thing by asking 'Alexa, ask room door'. If you have named your skill something different than 'room' instead say 'Alexa, ask {skill name} door.
 
 ## Built In
 
