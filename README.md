@@ -79,9 +79,9 @@ To enable the Alexa skill, do the following:
 
 ## Built In
 
-*Node.js
-*Python3
-*JSON/Amazon Alexa SDK
+Node.js
+Python3
+JSON/Amazon Alexa SDK
 
 ## Contributing
 
