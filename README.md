@@ -17,7 +17,7 @@ Physical Components:
 -2 Raspberry Pis with WiFi capability (only one if you aren't setting up the Alexa component or if you have a ngrok Pro account)
 -2 free ngrok accounts (or 1 Pro account if you want to use one device)
 -1 Servo Motor, we used this one https://www.amazon.com/ANNIMOS-Digital-Waterproof-DS3218MG-Control/dp/B076CNKQX4?ref_=fsclp_pl_dp_1
--1 LED and some header cables to set up the circuit (diagram coming soon)
+-1 LED and some header cables to set up the circuit (circuit diagram in doorPi folder)
 
 Digital Components:
 -Node.js and npm installed on your computer and the Raspberry Pi connected to the servo motor: https://nodejs.org/
@@ -55,6 +55,7 @@ pip3 install paho-mqtt
 -To get this project up and running you need to create a directory on each Raspberry Pi you are using to keep your files
 -Then all the files in the doorPi folder go on the Raspberry Pi you are connecting to the servo motor, and all the files except for Schema.JSON (it's for use in Amazon Alexa SDK) go on the other Raspberry Pi if you are implementing the Alexa functionality
 -Node.js should add the node_modules and packagelock.json files into the directory automatically when you run the code for the first time
+-Also look at the circuit diagram in the doorPi folder to look at how to set up the Raspberry Pi and servo motor
 
 *For running the web server that triggers the servo motor
 ```
