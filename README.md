@@ -12,10 +12,15 @@ To run this project, you need:
 
 Physical Components:
 -1 Raspberry Pi with WiFi capability
+
 -1 Servo Motor, we used this one https://www.amazon.com/ANNIMOS-Digital-Waterproof-DS3218MG-Control/dp/B076CNKQX4?ref_=fsclp_pl_dp_1
--Some header cables to set up the circuit (circuit diagram in doorPi folder)
+
+-Some header cables to set up the circuit (circuit diagram in doorPi folder along with image of final product)
+
 -1 USB Microphone or webcam
+
 -A monitor and keyboard to connect to the Pi so you can see what you're doing
+
 -A LOT of duct tape
 
 Digital Components:
