@@ -1,4 +1,4 @@
-# door-open
+# door-open - minecraft
 
 This branch contains a the code for a personal project that allows you to trigger a servo motor (in my case, being used to open my dorm door) by opening a door while playing Minecraft (Raspberry Pi edition).
 
