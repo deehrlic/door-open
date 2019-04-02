@@ -11,6 +11,7 @@ These instructions should allow you to trigger servo motors by having your Minec
 To run this project, you need:
 
 Physical Components:
+
 -1 Raspberry Pi with WiFi capability
 
 -1 Servo Motor, we used this one https://www.amazon.com/ANNIMOS-Digital-Waterproof-DS3218MG-Control/dp/B076CNKQX4?ref_=fsclp_pl_dp_1
