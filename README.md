@@ -7,7 +7,7 @@ We have since added the ability to ask an Amazon Echo to open our door with the 
 
 ## Getting Started
 
-These instructions should allow you to be able set up the system allowing you to remoltely open your door with either a webpage or an Amazon Echo.
+These instructions should allow you to be able set up the system allowing you to remotely open your door with either a webpage or an Amazon Echo.
 
 ### Prerequisites
 
