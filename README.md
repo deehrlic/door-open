@@ -44,7 +44,7 @@ pip install Flask-Ask
 
 -Move all files in the alexaPi folder to the Pi except Schema.JSON
 
--Look at the circuit diagram to figure out how to set up the Raspberry Pi and servo motor, a picture of the finished product is in the doorPi folder
+-Look at the circuit diagram to figure out how to set up the Raspberry Pi and servo motor, a picture of the finished product is in the doorPi folder (ignore the microphone in this case, the rest still applies)
 
 -Create an Amazon developer account and use that same account to set up/connect to your Echo device.
 
