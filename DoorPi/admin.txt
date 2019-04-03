@@ -1,1 +1,0 @@
-Door should become locked if unlocked and unlocked if locked. 
