@@ -75,8 +75,6 @@ JSON/Amazon Alexa SDK
 
 ## Contributing
 
-This is a personal project which isn't really contribution-friendly since it requires a lot of hardware (2 Raspberry Pis, an Amazon Echo, and a servo motor) to run.
-
 * **Drew Ehrlich** - *Codebase Developer* - [deehrlic](https://github.com/deehrlic)
 * **Corey DuVal** - *Circuit Master/Development Assistance/Circuit Diagrams* - [coreyduval](https://github.com/coreyduval)
 
