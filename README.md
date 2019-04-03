@@ -16,7 +16,7 @@ Physical Components:
 
 -1 free ngrok account
 
--1 Servo Motor, we used this one https://www.amazon.com/ANNIMOS-Digital-Waterproof-DS3218MG-Control/dp/B076CNKQX4?ref_=fsclp_pl_dp_1
+-1 Servo Motor, we used this one: https://www.amazon.com/ANNIMOS-Digital-Waterproof-DS3218MG-Control/dp/B076CNKQX4?ref_=fsclp_pl_dp_1
 
 -1 LED and some header cables to set up the circuit (circuit diagram in doorPi folder)
 
