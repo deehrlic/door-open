@@ -1,4 +1,4 @@
-# door-open
+# door-open oldsetup
 
 This repository contains a the code for a personal project that allowed me and my roommate to set up a Raspberry Pi running a Node.js web server tunneled through ngrok to trigger a servo motor whenever the webpage associated with the server was accessed which opened our door to our room. The code for this portion of the project is contained in the doorPi folder of this repository. The way the user interacts with this is by accessing a URL created by ngrok, a http tunneling service.
 
@@ -15,13 +15,18 @@ To run this project, you need:
 
 Physical Components:
 -2 Raspberry Pis with WiFi capability (only one if you aren't setting up the Alexa component or if you have a ngrok Pro account)
+
 -2 free ngrok accounts (or 1 Pro account if you want to use one device)
+
 -1 Servo Motor, we used this one https://www.amazon.com/ANNIMOS-Digital-Waterproof-DS3218MG-Control/dp/B076CNKQX4?ref_=fsclp_pl_dp_1
+
 -1 LED and some header cables to set up the circuit (circuit diagram in doorPi folder)
 
 Digital Components:
 -Node.js and npm installed on your computer and the Raspberry Pi connected to the servo motor: https://nodejs.org/
+
 -ngrok installed on all the Raspberry Pis you are using for this project: https://ngrok.com/download
+
 -PythonShell module for Node.js
 ```
 npm install python-shell
@@ -31,6 +36,7 @@ npm install python-shell
 npm install express
 ```
 -gpiozero for Python (for use on Raspberry Pi GPIO pins): https://gpiozero.readthedocs.io/en/stable/installing.html
+
 -paho-mqtt for Pyhton (only if implementing Alexa functionality)
 ```
 pip install paho-mqtt
@@ -53,8 +59,11 @@ pip3 install paho-mqtt
 ### Installing
 
 -To get this project up and running you need to create a directory on each Raspberry Pi you are using to keep your files
+
 -Then all the files in the doorPi folder go on the Raspberry Pi you are connecting to the servo motor, and all the files except for Schema.JSON (it's for use in Amazon Alexa SDK) go on the other Raspberry Pi if you are implementing the Alexa functionality
+
 -Node.js should add the node_modules and packagelock.json files into the directory automatically when you run the code for the first time
+
 -Also look at the circuit diagram in the doorPi folder to look at how to set up the Raspberry Pi and servo motor
 
 *For running the web server that triggers the servo motor
@@ -72,7 +81,9 @@ Going to yourngroklink.ngrok.io/admin once your server is running will let you t
 *To implement Alexa activation after the inital circuit/server is set up
 
 -To get the ability to say 'Alexa, ask room door' and open the door you need a second Raspberry Pi and a second ngrok account (or a Pro level ngrok account since you will need two active ngrok tunnels at once to use both the website and Alexa to open the door, and free ngrok accounts only allow one active ngrok tunnel per account), and some kind of Amazon Echo device.
+
 -Create an Amazon developer account and use that same account to set up your Echo device.
+
 -On the second Raspberry Pi, create a directory to store your work, and move all files from the remotePi folder into that directory except Schema.JSON. Following this tutorial (https://www.hackster.io/nishit-patel/controlling-raspberry-pi-using-alexa-33715b), set up a new Alexa skill (named room instead of raspberry) and replace the JSON code in the Interaction Model with Schema.JSON.
 
 To enable the Alexa skill, do the following:
