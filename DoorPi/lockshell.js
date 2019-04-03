@@ -13,7 +13,7 @@ app.get('/', function(req, res) {
 
 	if(boolLock == false){
 
-		res.sendFile(__dirname + "/" + "test.txt");
+		res.sendFile(__dirname + "/" + "unlocked.txt");
 			PythonShell.run('motor.py', null, function (err) {
   				if (err) throw err;
   				console.log('finished MOTOR');
@@ -27,32 +27,6 @@ app.get('/', function(req, res) {
 		});
 	}
 
-});
-
-app.get('/admin', function(req, res) {
-	console.log("adminpage");
-	console.log(boolLock);	
-	res.sendFile(__dirname + "/" + "admin.txt");
-
-	if(boolLock == false){
-		boolLock = true;
-		res.redirect('/locked');	
-	}
-	else if(boolLock == true){
-		boolLock = false;
-		res.redirect('/unlocked');	
-	}
-});
-
-app.get('/locked', function(req, res) {
-	console.log("lockedpage");
-	res.sendFile(__dirname + "/" + "locked.txt");
-});
-
-
-app.get('/unlocked', function(req, res) {
-	console.log("unlockedpage");
-	res.sendFile(__dirname + "/" + "unlocked.txt");
 });
 
 
