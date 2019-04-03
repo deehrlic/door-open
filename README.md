@@ -38,7 +38,9 @@ https://github.com/deehrlic/door-open/tree/oldsetup
 ## Built In
 
 Node.js with Express.js
+
 Python 3
+
 JSON/Amazon Alexa SDK
 
 ## Contributing
