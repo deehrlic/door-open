@@ -38,7 +38,7 @@ sudo apt install python3-gpiozero
 
 -Create a directory to hold the files and place mineDoor.py and mineMotor.py inside it
 
--Look at the circuit diagram in the doorPi folder to look at how to set up the Raspberry Pi and servo motor (image of the finished project will be there too for reference)
+-Look at the circuit diagram in the doorPi folder to look at how to set up the Raspberry Pi and servo motor (image of the finished project will be there too for reference, ignore the microphone)
 
 -Take the entire 'world' folder in doorPi and move it to where your Minecraft saves are stored on your Pi (google it if you don't know where)
 
