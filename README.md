@@ -1,4 +1,4 @@
-# door-open
+# door-open alexa
 
 This branch contains a the code for a personal project that allowed me and my roommate to set up a pair of Raspberry Pis in tandem with an Amazon Echo to allow us to say 'Alexa, ask room door', triggering a servo motor that would open our dorm room.  
 
