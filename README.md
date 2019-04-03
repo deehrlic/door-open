@@ -50,7 +50,8 @@ pip install Flask-Ask
 
 -Following this tutorial (https://www.hackster.io/nishit-patel/controlling-raspberry-pi-using-alexa-33715b), set up a new Alexa skill (named room instead of raspberry) and replace the JSON code in the Interaction Model section with the Schema.JSON given in the remotePi folder.
 
-Before testing the Echo skill, do the following (it won't work if you don't do these things, it connects the Echo to the Pi):
+-Before testing the Echo skill, do the following (it won't work if you don't do these things, it connects the Echo to the Pi):
+
 -In separate terminals for each command,
 
 ```
