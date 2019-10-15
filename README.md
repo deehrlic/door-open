@@ -1,49 +1,63 @@
-# door-open master
+# door-open snowboy
 
-This repository contains the code for the ways that my roommate and I have managed to open our door with a servo motor and a Raspberry Pi (being with an Amazon Echo, a Node.js http server, non-Echo offline voice recognition, and Minecraft). Each way to open our door is kept in its own branch (see Getting Started).
+This branch contains a the code for a personal project that allows you to trigger a servo motor (in my case, being used to open my dorm door) by opening a door using Snowboy's wake word detection system.
 
 ## Getting Started
 
-Choose a branch to get to the code and method for setting up that system.
+These instructions should allow you to trigger servo motors by using your voice.
 
-## open-door snowboy
-(COMING SOON)
+### Prerequisites
 
-Our current choice for voice control, this setup uses a combination of Snowboy's offline wake word detection technology and some Python code to enable faster response times on voice commands versus the Echo setup, which required going through Amazon's servers which took more time. 
+To run this project, you need:
 
-## open-door nodeserver
+Physical Components:
 
-The first way we opened our door was with a Node.js server tunneled through to the internet with ngrok, a free http tunneling service. We still actively use this setup.
+-1 Raspberry Pi with WiFi capability
 
-https://github.com/deehrlic/door-open/tree/nodeserver
+-1 Servo Motor, we used this one https://www.amazon.com/ANNIMOS-Digital-Waterproof-DS3218MG-Control/dp/B076CNKQX4?ref_=fsclp_pl_dp_1
 
-## open-door alexa
+-Some header cables to set up the circuit (circuit diagram in doorPi folder along with image of final product)
 
-Our first addition to our setup, this branch will allow you to control a servo motor with an Amazon Echo and your voice. We have replaced this setup with the setup in the snowboy branch, but the code is here.
+-1 USB Microphone or webcam
 
-https://github.com/deehrlic/door-open/tree/alexa
+-A monitor and keyboard to connect to the Pi so you can see what you're doing
 
-## open-door minecraft
+-A LOT of duct tape
 
-A more fun and casual setup, if you've ever wanted to have Minecraft have real life actions, this code is for you.
+Digital Components:
+-Raspbian OS installed on your Pi (this whole README assumes you have it installed already)
 
-https://github.com/deehrlic/door-open/tree/minecraft
+-gpiozero for Python
+```
+sudo apt install python3-gpiozero
+```
 
-## open-door oldsetup 
+-Snowboy installed
+https://snowboy.kitt.ai/
 
-This branch's setup is the code and methods for our previous setup, which consisted of using 2 Raspberry Pis to talk to each other to have the Node.js server and the Echo both being able to open the door. No longer our current setup, which is a combination of nodeserver and snowboy branches.
+### Running
 
-https://github.com/deehrlic/door-open/tree/oldsetup
+-Create a directory to hold the files and place Bloomie.pmdl and snowboy_door.py in it.
+
+-Look at the circuit diagram in the doorPi folder to look at how to set up the Raspberry Pi, servo motor, and microphone
+
+-Run 
+```
+python snowboy_door.py Bloomie.pmdl
+```
+
+The script should spit out a bunch of text and then continue running. When you say "Bloomie", the command line should display "hotword dectected" and the motor should run. If you don't want your hotword to be "Bloomie", go to Snowboy's website and make a free account and use their model creation tool to make your own with whatever word you want.
+
 
 ## Built In
 
-Node.js with Express.js
+Python
 
-Python 3
-
-JSON/Amazon Alexa SDK
+Minecraft
 
 ## Contributing
+
+If you can think of something to add to this branch, reach out!
 
 * **Drew Ehrlich** - *Codebase Developer* - [deehrlic](https://github.com/deehrlic)
 * **Corey DuVal** - *Circuit Master/Development Assistance/Circuit Diagrams* - [coreyduval](https://github.com/coreyduval)
@@ -56,4 +70,8 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 Special thanks to:
 
+**Steaven Ballesteros**
+
 **Justin Hinman**
+
+
