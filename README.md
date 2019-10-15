@@ -10,6 +10,8 @@ Choose a branch to get to the code and method for setting up that system.
 
 Our current choice for voice control, this setup uses a combination of Snowboy's offline wake word detection technology and some Python code to enable faster response times on voice commands versus the Echo setup, which required going through Amazon's servers which took more time. 
 
+https://github.com/deehrlic/door-open/tree/snowboy
+
 ## open-door nodeserver
 
 The first way we opened our door was with a Node.js server tunneled through to the internet with ngrok, a free http tunneling service. We still actively use this setup.
