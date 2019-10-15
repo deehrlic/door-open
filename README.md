@@ -7,7 +7,6 @@ This repository contains the code for the ways that my roommate and I have manag
 Choose a branch to get to the code and method for setting up that system.
 
 ## open-door snowboy
-(COMING SOON)
 
 Our current choice for voice control, this setup uses a combination of Snowboy's offline wake word detection technology and some Python code to enable faster response times on voice commands versus the Echo setup, which required going through Amazon's servers which took more time. 
 
