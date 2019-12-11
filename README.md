@@ -47,7 +47,7 @@ JSON/Amazon Alexa SDK
 ## Contributing
 
 * **Drew Ehrlich** - *Codebase Developer* - [deehrlic](https://github.com/deehrlic)
-* **Corey DuVal** - *Circuit Master/Development Assistance/Circuit Diagrams* - [coreyduval](https://github.com/coreyduval)
+* **Corey DuVal** - *Circuit Design/Development Assistance/Circuit Diagrams* - [coreyduval](https://github.com/coreyduval)
 
 ## License
 
